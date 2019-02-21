@@ -1,0 +1,78 @@
+
+.character {
+  background-size: cover;
+}
+
+.active-character {
+  grid-row: 1 / span 4;
+  display:  flex;
+  background-size: cover;
+  background-position: center top;
+  min-height: 500px;
+}
+
+.active-character-stats {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  align-self: flex-end;
+  margin: 20px;
+  padding: 10px;
+  color: white;
+}
+
+.defeated {
+  animation: shake 0.8s cubic-center(.36, .07, .19, .98) both;
+}
+
+#character-list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-auto-flow: dense;
+}
+
+#character-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr .5fr .5fr 1fr;
+  grid-auto-flow: 1fr minmax(30px, .3fr) 1fr;
+}
+
+#player {
+  grid-column: 1/ span 2;
+}
+
+#player > .active-character-stats {
+  background: rgba(0, 255, 80, 0.3);
+}
+
+#attack {
+  grid-column: 2/4;
+  grid-row: 2;
+  font-size: 2.5rem;
+  line-height: 0.5;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
