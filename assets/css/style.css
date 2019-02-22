@@ -38,8 +38,13 @@
   grid-auto-flow: 1fr minmax(30px, .3fr) 1fr;
 }
 
+
 #player {
   grid-column: 1/ span 2;
+}
+
+#computer {
+  grid-column: 3/ span 2;
 }
 
 #player > .active-character-stats {
