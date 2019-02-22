@@ -1,6 +1,12 @@
 
+body {
+  background-color: rgb(255, 229, 192);
+}
+
 .character {
   background-size: cover;
+  background-position: center;
+  height: 120px;
 }
 
 .active-character {
@@ -29,8 +35,10 @@
   width: 100%;
   grid-template-columns: 1fr;
   grid-auto-flow: dense;
+  background-color: rgb(255, 229, 192);
 }
 
+}
 #character-grid {
   display: grid;
   width: 100%;
@@ -48,7 +56,7 @@
 }
 
 #player > .active-character-stats {
-  background: rgba(0, 255, 80, 0.3);
+  background: rgba(255, 167, 43, 0.3);
 }
 
 #attack {

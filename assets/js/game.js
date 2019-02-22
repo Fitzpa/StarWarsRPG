@@ -6,7 +6,7 @@ var characterList = [
     name: "Obi Wan Kenobi",
     health: 120,
     attack: 8,
-    counter: 15,
+    counter: 10,
     dfltAttak: 8,
     pic: "assets/images/obi-wan-kenobi.jpg"
   },
@@ -14,7 +14,7 @@ var characterList = [
     name: "Luke Skywalker",
     health: 100,
     attack: 15,
-    counter: 25,
+    counter: 15,
     dfltAttak: 15,
     pic: "assets/images/Luke-Skywalker.jpg"
   },
@@ -22,7 +22,7 @@ var characterList = [
     name: "Darth Vader",
     health: 150,
     attack: 12,
-    counter: 15,
+    counter: 30,
     dfltAttak: 12,
     pic: "assets/images/Darth-Vader.jpeg"
   },
@@ -141,10 +141,11 @@ function attack() {
         if (gameRoster.length === 0) {
           clearInterval(IntervalId);
           gameRunning = false;
-          alert("You win! To begin a new game press Start!");
+          
         }
+        alert("You win! To begin a new game press Start!")
         return false;
-      }
+      };
 
       player.health -= computer.counter;
 
@@ -161,7 +162,7 @@ function attack() {
 
           clearInterval(intervalId);
           $("#quote").text("You have lost! To begin a new game press Start!");
-      }
+      } 
   }  
 
 $("#new-game").on("click", newGame);
